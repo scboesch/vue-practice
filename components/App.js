@@ -15,7 +15,9 @@ export default {
     };
   },
   methods: {
-    updateCurrentChart: function(newChart) {}
+    updateCurrentChart: function(newChart) {
+      this.currentChart = "Fix this";
+    }
   },
   template: `
   <div>
@@ -31,8 +33,8 @@ export default {
 
     Welcome to {{title}}.
     Current chart: <b>{{currentChart}}</b><br>
-     <button>Local Bar Chart</button>
-     <button>Local Line Chart</button>
+     <button v-on:click="updateCurrentChart('localBarData')">Local Bar Chart</button>
+     <button v-on:click="updateCurrentChart('localLineData')">Local Line Chart</button>
      <br>
      
 		  Chart: Local Bar Data

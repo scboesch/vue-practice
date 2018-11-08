@@ -13,7 +13,7 @@ describe("Vue component tests", () => {
   it("The component should have an updateCurrentChart function.", () => {
     expect(typeof App.methods.updateCurrentChart).toBe("function");
   });
-  it("has a created hook", () => {
+  it("The component type to be object", () => {
     expect(typeof App).toBe("object");
   });
   it("The component should have a data function.", () => {
@@ -27,8 +27,16 @@ describe("Vue component tests", () => {
     expect(defaultData.localLineData.length).toBe(3);
     expect(defaultData.localBarData.length).toBe(5);
   });
-  it("Current chart should be localBarData.", () => {
+  it("Current chart default should be localBarData.", () => {
     const defaultData = App.data();
     expect(defaultData.currentChart).toBe("localBarData");
+  });
+  it("Calling updateCurrentChart should update the currentChart", () => {
+    // We will mount the component for testing.
+    const vm = new Vue(App).$mount();
+    expect(vm.currentChart).toBe("localBarData");
+    // Call the updateCurrentChart function
+    vm.updateCurrentChart("localLineData");
+    expect(vm.currentChart).toBe("localLineData");
   });
 });
