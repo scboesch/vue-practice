@@ -5,15 +5,15 @@ export default {
       currentChart: "localBarData",
       title: "Vue practice",
       charts: {
-        localBarData: [
-          ["Jan", 4],
-          ["Feb", 2],
-          ["Mar", 10],
-          ["Apr", 5],
-          ["May", 3]
-        ],
-        localLineData: [["Sun", 32], ["Mon", 46], ["Tue", 28]],
-        pieChartData: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
+        localBarData: {
+          data: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3]]
+        },
+        localLineData: {
+          data: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
+        },
+        pieChartData: {
+          data: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
+        }
       }
     };
   },
@@ -31,7 +31,8 @@ export default {
       <li><s>Only show currentChart</s></li>
       <li><s>Add a pie chart</s></li>
       <li><s>Refactor the chart data to be under a single charts node.</s></li>
-      <li>Find the list of charts from the charts node keys.</li>
+      <li><s>Find the list of charts from the charts node keys.</s></li>
+      <li>Add a title for each chart in the charts node.</li>
     </ol>
 
     Welcome to {{title}}.
