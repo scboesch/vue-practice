@@ -40,7 +40,9 @@ export default {
       <li><s>Find the list of charts from the charts node keys.</s></li>
       <li><s>Add a title for each chart in the charts node.</s></li>
       <li><s>Add a chartType for each chart in the charts node.</s></li>
-      <li>Use the chartType to render the appropriate chart.</li>
+      <li><s>Use the chartType to render the appropriate chart.<s></li>
+      <li>Add a chart by just adding a chart node.</li>
+      
     </ol>
 
     Welcome to {{title}}.

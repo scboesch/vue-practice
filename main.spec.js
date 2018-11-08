@@ -64,4 +64,11 @@ describe("Vue component tests", () => {
     expect(vm.charts.localBarData.chartType).toBe("column-chart");
     expect(vm.charts.pieChartData.chartType).toBe("pie-chart");
   });
+  it("There should be 4 charts.", () => {
+    const vm = new Vue(App).$mount();
+    expect(typeof vm.charts).toBe("object");
+    // Copy a chart node and add another chart to charts.
+    // This test counts the number of keys charts in the charts data
+    expect(Object.keys(vm.charts).length).toEqual(4);
+  });
 });
