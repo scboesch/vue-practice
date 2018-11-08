@@ -47,15 +47,15 @@ export default {
      <br>
       <div v-if="currentChart=='localBarData'">
 		    Chart: Local Bar Data
-        <column-chart :data="charts.localBarData"></column-chart>
+        <column-chart :data="charts.localBarData.data"></column-chart>
       </div>
       <div v-if="currentChart=='localLineData'">
         Chart: Local Line Data
-		    <line-chart :data="charts.localLineData"></line-chart>
+		    <line-chart :data="charts.localLineData.data"></line-chart>
       </div>
       <div v-if="currentChart=='pieChartData'">
         Chart: Pie Chart Data
-		    <pie-chart :data="charts.pieChartData"></pie-chart>
+		    <pie-chart :data="charts.pieChartData.data"></pie-chart>
       </div>
     </div>
   </div>
