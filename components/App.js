@@ -19,6 +19,11 @@ export default {
           title: "Pie Data",
           chartType: "pie-chart",
           data: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
+        },
+        pieChartData2: {
+          title: "Pie Data 2",
+          chartType: "pie-chart",
+          data: [["Wed", 3], ["Thu", 46], ["Fri", 28]]
         }
       }
     };
@@ -41,7 +46,7 @@ export default {
       <li><s>Add a title for each chart in the charts node.</s></li>
       <li><s>Add a chartType for each chart in the charts node.</s></li>
       <li><s>Use the chartType to render the appropriate chart.<s></li>
-      <li>Add a chart by just adding a chart node.</li>
+      <li><s>Add a chart by just adding a chart node.</s></li>
       
     </ol>
 
