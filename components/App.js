@@ -12,12 +12,12 @@ export default {
         },
         localLineData: {
           title: "Line Data",
-
+          chartType: "line-chart",
           data: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
         },
         pieChartData: {
           title: "Pie Data",
-
+          chartType: "pie-chart",
           data: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
         }
       }
@@ -38,28 +38,34 @@ export default {
       <li><s>Add a pie chart</s></li>
       <li><s>Refactor the chart data to be under a single charts node.</s></li>
       <li><s>Find the list of charts from the charts node keys.</s></li>
-      <li>Add a title for each chart in the charts node.</li>
+      <li><s>Add a title for each chart in the charts node.</s></li>
+      <li><s>Add a chartType for each chart in the charts node.</s></li>
+      <li>Use the chartType to render the appropriate chart.</li>
     </ol>
 
     Welcome to {{title}}.
     <br>
     Current chart: <b>{{currentChart}}</b><br>
     <span v-for="(value, key) in charts">
-      <button v-on:click="updateCurrentChart(key)">{{key}}</button>
+      <button v-on:click="updateCurrentChart(key)">{{value.title}}</button>
     </span>
+    <br>
+     <div v-if="charts[currentChart].chartType=='column-chart'">
+		    Chart: {{charts[currentChart].title}}
+        <column-chart :data="charts[currentChart].data"></column-chart>
+     </div>
+     <div v-if="charts[currentChart].chartType=='line-chart'">
+		    Chart: {{charts[currentChart].title}}
+        <line-chart :data="charts[currentChart].data"></column-chart>
+     </div>
+          <div v-if="charts[currentChart].chartType=='pie-chart'">
+		    Chart: {{charts[currentChart].title}}
+        <pie-chart :data="charts[currentChart].data"></column-chart>
+     </div>
+      
+   
      <br>
-      <div v-if="currentChart=='localBarData'">
-		    Chart: Local Bar Data
-        <column-chart :data="charts.localBarData.data"></column-chart>
-      </div>
-      <div v-if="currentChart=='localLineData'">
-        Chart: Local Line Data
-		    <line-chart :data="charts.localLineData.data"></line-chart>
-      </div>
-      <div v-if="currentChart=='pieChartData'">
-        Chart: Pie Chart Data
-		    <pie-chart :data="charts.pieChartData.data"></pie-chart>
-      </div>
+      
     </div>
   </div>
 `
