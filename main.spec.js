@@ -57,4 +57,11 @@ describe("Vue component tests", () => {
     expect(typeof vm.charts.localBarData.title).toBe("string");
     expect(typeof vm.charts.pieChartData.title).toBe("string");
   });
+  it("There should be a correct chartType property for each chart.", () => {
+    // We will mount the component for testing.
+    const vm = new Vue(App).$mount();
+    expect(vm.charts.localLineData.chartType).toBe("line-chart");
+    expect(vm.charts.localBarData.chartType).toBe("column-chart");
+    expect(vm.charts.pieChartData.chartType).toBe("pie-chart");
+  });
 });
