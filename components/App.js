@@ -45,8 +45,10 @@ export default {
 
     Welcome to {{title}}.
     Current chart: <b>{{currentChart}}</b><br>
-     <button v-on:click="updateCurrentChart('localBarData')">Local Bar Chart</button>
-     <button v-on:click="updateCurrentChart('localLineData')">Local Line Chart</button>
+     <button v-on:click="updateCurrentChart('localBarData')">Bar Chart</button>
+     <button v-on:click="updateCurrentChart('localLineData')">Line Chart</button>
+     <button v-on:click="updateCurrentChart('pieChartData')">Pie Chart</button>
+    
      <br>
      
       <div v-if="currentChart=='localBarData'">
@@ -56,6 +58,10 @@ export default {
       <div v-if="currentChart=='localLineData'">
         Chart: Local Line Data
 		    <line-chart :data="localLineData"></line-chart>
+      </div>
+      <div v-if="currentChart=='pieChartData'">
+        Chart: Pie Chart Data
+		    <pie-chart :data="pieChartData"></pie-chart>
       </div>
     </div>
   </div>
