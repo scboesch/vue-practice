@@ -9,6 +9,7 @@ export default {
           data: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3]]
         },
         localLineData: {
+          title: "Line Data",
           data: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
         },
         pieChartData: {

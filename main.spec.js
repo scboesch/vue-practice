@@ -49,4 +49,12 @@ describe("Vue component tests", () => {
     expect(vm.charts.localBarData.data.length).toBe(5);
     expect(vm.charts.pieChartData.data.length).toBe(3);
   });
+  it("There should be a title property for each chart.", () => {
+    // We will mount the component for testing.
+    const vm = new Vue(App).$mount();
+    // Add the same chart data as new nodes under the charts node.
+    expect(typeof vm.charts.localLineData.title).toBe("string");
+    expect(typeof vm.charts.localBarData.title).toBe("string");
+    expect(typeof vm.charts.pieChartData.title).toBe("string");
+  });
 });
