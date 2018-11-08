@@ -6,6 +6,7 @@ export default {
       title: "Vue practice",
       charts: {
         localBarData: {
+          title: "Bar Data",
           data: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3]]
         },
         localLineData: {
@@ -13,6 +14,7 @@ export default {
           data: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
         },
         pieChartData: {
+          title: "Pie Data",
           data: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
         }
       }
