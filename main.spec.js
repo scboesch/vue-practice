@@ -45,4 +45,13 @@ describe("Vue component tests", () => {
     // pieChartData: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
     expect(vm.pieChartData.length).toBe(3);
   });
+  it("There should be a charts node with the same chart data.", () => {
+    // We will mount the component for testing.
+    const vm = new Vue(App).$mount();
+    expect(typeof vm.charts).toBe("object");
+    // Add the same chart data as new nodes under the charts node.
+    expect(vm.charts.localLineData.length).toBe(3);
+    expect(vm.charts.localBarData.length).toBe(5);
+    expect(vm.charts.pieChartData.length).toBe(3);
+  });
 });

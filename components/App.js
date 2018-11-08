@@ -13,6 +13,7 @@ export default {
       ],
       localLineData: [["Sun", 32], ["Mon", 46], ["Tue", 28]],
       pieChartData: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
+      //charts:
     };
   },
   methods: {
@@ -27,7 +28,7 @@ export default {
       <li><s>Change the title</s></li>
       <li><s>The currentChart should change when a button is clicked.</s> </li>
       <li><s>Only show currentChart</s></li>
-      <li>Add a pie chart</li>
+      <li><s>Add a pie chart</s></li>
       <li>Refactor the chart data to be under a single charts node.</li>
       <li>Find the list of charts from the charts node keys.</li>
     </ol>
