@@ -3,7 +3,7 @@ export default {
   data() {
     return {
       currentChart: "localBarData",
-      title: "BT3103 Week 10",
+      title: "Vue practice",
       localBarData: [
         ["Jan", 4],
         ["Feb", 2],
@@ -19,14 +19,20 @@ export default {
   },
   template: `
   <div>
-    <h3> Charts based on
-			<a href="https://github.com/ankane/vue-chartkick">vue-chartkick</a>
-		</h3>
-    Current chart: {{currentChart}}
+    Todos: 
+    <ol>
+      <li><s>Change the title</s></li>
+      <li>The currentChart should change when a button is clicked. </li>
+      <li>Only show currentChart</li>
+      <li>Add a pie chart</li>
+      <li>Refactor the chart data to be under a single charts node.</li>
+      <li>Find the list of charts from the charts node keys.</li>
+    </ol>
+
+    Welcome to {{title}}.
+    Current chart: <b>{{currentChart}}</b><br>
      <button>Local Bar Chart</button>
      <button>Local Line Chart</button>
-     <button>FB Bar Chart</button>
-     <button>FB Line Chart</button>
      <br>
      
 		  Chart: Local Bar Data
