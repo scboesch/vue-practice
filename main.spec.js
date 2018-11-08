@@ -39,4 +39,10 @@ describe("Vue component tests", () => {
     vm.updateCurrentChart("localLineData");
     expect(vm.currentChart).toBe("localLineData");
   });
+  it("pieChartData should have three values", () => {
+    // We will mount the component for testing.
+    const vm = new Vue(App).$mount();
+    // pieChartData: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
+    expect(vm.pieChartData.length).toBe(3);
+  });
 });
