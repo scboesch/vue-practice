@@ -30,16 +30,16 @@ export default {
       <li><s>The currentChart should change when a button is clicked.</s> </li>
       <li><s>Only show currentChart</s></li>
       <li><s>Add a pie chart</s></li>
-      <li>Refactor the chart data to be under a single charts node.</li>
+      <li><s>Refactor the chart data to be under a single charts node.</s></li>
       <li>Find the list of charts from the charts node keys.</li>
     </ol>
 
     Welcome to {{title}}.
+    <br>
     Current chart: <b>{{currentChart}}</b><br>
-     <button v-on:click="updateCurrentChart('localBarData')">Bar Chart</button>
-     <button v-on:click="updateCurrentChart('localLineData')">Line Chart</button>
-     <button v-on:click="updateCurrentChart('pieChartData')">Pie Chart</button>
-    
+    <span v-for="(value, key) in charts">
+      <button v-on:click="updateCurrentChart(key)">{{key}}</button>
+    </span>
      <br>
       <div v-if="currentChart=='localBarData'">
 		    Chart: Local Bar Data
