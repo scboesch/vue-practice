@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     updateCurrentChart: function(newChart) {
-      this.currentChart = "Fix this";
+      this.currentChart = newChart;
     }
   },
   template: `
@@ -24,7 +24,7 @@ export default {
     Todos: 
     <ol>
       <li><s>Change the title</s></li>
-      <li>The currentChart should change when a button is clicked. </li>
+      <li><s>The currentChart should change when a button is clicked.</s> </li>
       <li>Only show currentChart</li>
       <li>Add a pie chart</li>
       <li>Refactor the chart data to be under a single charts node.</li>
