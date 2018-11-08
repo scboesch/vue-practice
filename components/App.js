@@ -37,11 +37,14 @@ export default {
      <button v-on:click="updateCurrentChart('localLineData')">Local Line Chart</button>
      <br>
      
-		  Chart: Local Bar Data
-      <column-chart :data="localBarData"></column-chart>
-      <br> 
-      Chart: Local Line Data
-		  <line-chart :data="localLineData"></line-chart>
+      <div v-if="currentChart=='localBarData'">
+		    Chart: Local Bar Data
+        <column-chart :data="localBarData"></column-chart>
+      </div>
+      <div v-if="currentChart=='localLineData'">
+        Chart: Local Line Data
+		    <line-chart :data="localLineData"></line-chart>
+      </div>
     </div>
   </div>
 `
