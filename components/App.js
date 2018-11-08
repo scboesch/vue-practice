@@ -12,8 +12,18 @@ export default {
         ["May", 3]
       ],
       localLineData: [["Sun", 32], ["Mon", 46], ["Tue", 28]],
-      pieChartData: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
-      //charts:
+      pieChartData: [["Sun", 32], ["Mon", 46], ["Tue", 28]],
+      charts: {
+        localBarData: [
+          ["Jan", 4],
+          ["Feb", 2],
+          ["Mar", 10],
+          ["Apr", 5],
+          ["May", 3]
+        ],
+        localLineData: [["Sun", 32], ["Mon", 46], ["Tue", 28]],
+        pieChartData: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
+      }
     };
   },
   methods: {
