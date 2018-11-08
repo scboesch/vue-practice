@@ -3,7 +3,7 @@ export default {
   data() {
     return {
       currentChart: "localBarData",
-      title: "BT3103 Week 10",
+      title: "Vue practice",
       localBarData: [
         ["Jan", 4],
         ["Feb", 2],
@@ -21,7 +21,7 @@ export default {
   <div>
     Todos: 
     <ol>
-      <li>Change the title</li>
+      <li><s>Change the title</s></li>
       <li>The currentChart should change when a button is clicked. </li>
       <li>Only show currentChart</li>
       <li>Add a pie chart</li>

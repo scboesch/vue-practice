@@ -7,7 +7,6 @@ describe("Vue component tests", () => {
   });
   it("The component should have the correct title property.", () => {
     const defaultData = App.data();
-    // Change the default title in the component to be:
     expect(defaultData.title).toBe("Vue practice");
   });
 
