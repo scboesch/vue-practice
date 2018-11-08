@@ -4,15 +4,6 @@ export default {
     return {
       currentChart: "localBarData",
       title: "Vue practice",
-      localBarData: [
-        ["Jan", 4],
-        ["Feb", 2],
-        ["Mar", 10],
-        ["Apr", 5],
-        ["May", 3]
-      ],
-      localLineData: [["Sun", 32], ["Mon", 46], ["Tue", 28]],
-      pieChartData: [["Sun", 32], ["Mon", 46], ["Tue", 28]],
       charts: {
         localBarData: [
           ["Jan", 4],
@@ -50,18 +41,17 @@ export default {
      <button v-on:click="updateCurrentChart('pieChartData')">Pie Chart</button>
     
      <br>
-     
       <div v-if="currentChart=='localBarData'">
 		    Chart: Local Bar Data
-        <column-chart :data="localBarData"></column-chart>
+        <column-chart :data="charts.localBarData"></column-chart>
       </div>
       <div v-if="currentChart=='localLineData'">
         Chart: Local Line Data
-		    <line-chart :data="localLineData"></line-chart>
+		    <line-chart :data="charts.localLineData"></line-chart>
       </div>
       <div v-if="currentChart=='pieChartData'">
         Chart: Pie Chart Data
-		    <pie-chart :data="pieChartData"></pie-chart>
+		    <pie-chart :data="charts.pieChartData"></pie-chart>
       </div>
     </div>
   </div>

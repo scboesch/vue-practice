@@ -24,8 +24,8 @@ describe("Vue component tests", () => {
   });
   it("There should be local chart data.", () => {
     const defaultData = App.data();
-    expect(defaultData.localLineData.length).toBe(3);
-    expect(defaultData.localBarData.length).toBe(5);
+    expect(defaultData.charts.localLineData.length).toBe(3);
+    expect(defaultData.charts.localBarData.length).toBe(5);
   });
   it("Current chart default should be localBarData.", () => {
     const defaultData = App.data();
@@ -43,7 +43,7 @@ describe("Vue component tests", () => {
     // We will mount the component for testing.
     const vm = new Vue(App).$mount();
     // pieChartData: [["Sun", 32], ["Mon", 46], ["Tue", 28]]
-    expect(vm.pieChartData.length).toBe(3);
+    expect(vm.charts.pieChartData.length).toBe(3);
   });
   it("There should be a charts node with the same chart data.", () => {
     // We will mount the component for testing.
